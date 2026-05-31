@@ -1,0 +1,11 @@
+Khi huấn luyện một mô hình Machine Learning, bạn phát hiện ra mô hình đạt độ chính xác (Accuracy) rất cao trên tập Training set nhưng khi đánh giá trên tập Validation/Test 
+set thì độ chính xác lại giảm mạnh.
+Hiện tượng này gọi là gì? Nguyên nhân gốc rễ (dưới góc độ Bias và Variance) là gì?
+Đối với các mô hình truyền thống (như Linear/Logistic Regression hoặc Decision Tree), bạn sẽ dùng những kỹ thuật cụ thể nào để khắc phục hiện tượng này?
+
+Trả lời 
+Đây chính là hiện tượng overfitting , nguyên nhân gốc rễ do bias chính là độ chênh lệch của mô hình so với thực tế quá nhỏ , và phương sai Variance độ nhạy cảm của dữ liệu quá lớn 
+đối với mô hình truyền thống hồi quy ta có thể dùng kỹ thuật thêm hàm phạt vào hàm mất mát L1 , L2 với L1 chuyển trọng số các đối tượng không hữu dụng về 0 để giảm độ phức tạp dữ liệu
+đối với L2 ta giữ trọng số nhỏ đồng đều để tránh 1 vài đặc trưng chiếm quá nhiều gây nhiễu khiến mô hình nhạy cảm , còn với mô hình Decision tree ta sd pp cắt tỉa cây giảm max_depth
+và tăng số lượng mẫu tối thiểu
+
